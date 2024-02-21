@@ -9,7 +9,7 @@
         <DataTemplate DataType="{x:Type viewModel:HomeVM}">
             <view:Home/>
         </DataTemplate>
-        
+
         <DataTemplate DataType="{x:Type viewModel:DetailVM}">
             <view:Detail/>
         </DataTemplate>

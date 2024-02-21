@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace test202.MVVM.ViewModel
 {
-    internal class DetailVM : Core.ViewModel
+    public class DetailVM : Core.ViewModel
     {
     }
 }

@@ -4,11 +4,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:test202.MVVM.View"
+             xmlns:VM="clr-namespace:test202.MVVM.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <VM:HomeVM/>
+    </UserControl.DataContext>
+
     <Grid Background="Bisque">
-        <StackPanel VerticalAlignment="Center">
-            <TextBlock Text="Home" FontSize="30" HorizontalAlignment="Center"/>
-        </StackPanel>
+        <ListBox ItemsSource="{Binding Coins}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </UserControl>
